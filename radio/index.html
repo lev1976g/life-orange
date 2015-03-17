@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>Мультимедиа - MJU плеер сайта</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta name="title" content="Мультимедиа - MJU плеер сайта">
+<script language="javascript" type="text/javascript" src="index.js"></script>
+<style type="text/css">
+body{background-color:#000;color:#f0f7ff;font:11px Tahoma;}
+td{font:11px Tahoma;}
+.mju{width:150px;text-align:center;color:#444;font:bold 10px Arial;}
+.mju a{color:#444;font:bold 10px Arial;text-decoration:underline;}
+.mju a:hover{text-decoration:none;}
+</style>
+</head>
+<body>
+
+<!-- mju-плеер -->
+<div class="mju">
+	<object width="150" height="150" id="mju">
+		<param name="allowScriptAccess" value="sameDomain" />
+                	<param name="swLiveConnect" value="true" />
+		<param name="movie" value="mju.swf" />
+		<param name="flashvars" value="playlist=playlist.mpl&auto_run=0&repeat=1&shuffle=0" />
+		<param name="loop" value="false" />
+		<param name="menu" value="false" />
+		<param name="quality" value="high" />
+		<param name="wmode" value="transparent" />
+		<embed src="mju.swf" flashvars="playlist=playlist.mpl&auto_run=0&repeat=1&shuffle=0" loop="false" menu="false" quality="high" wmode="transparent" bgcolor="#ffffff" width="150" height="150" name="mju" allowScriptAccess="sameDomain" swLiveConnect="true" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+	</object>
+</div>
+<!-- /mju-плеер -->
+
+<!-- пример пульта ДУ для mju -->
+<table cellspacing="0" cellpadding="10" border="0" style="border:1px solid #CCC"><tr valign="top" align="center">
+	<td>
+		Плейлист по номерам<br><br>
+		<a href="/" onclick="mju_play_track(1);return false;">Проиграть 1-й трек</a><br>
+		<a href="/" onclick="mju_play_track(2);return false;">Проиграть 2-й трек</a><br>
+		<a href="/" onclick="mju_play_track(3);return false;">Проиграть 3-й трек</a><br>
+	</td><td>
+		Плейлист по названиям файлов<br><br>
+		<a href="/" onclick="mju_play_file('to');return false;">Проиграть трек "to*"</a><br>
+		<a href="/" onclick="mju_play_file('int');return false;">Проиграть трек "int*"</a><br>
+		<a href="/" onclick="mju_play_file('zhe');return false;">Проиграть трек "zhe*"</a><br>
+	</td>
+</tr><tr valign="top" align="center">
+	<td colspan="2">
+		Основные команды управления<br><br>
+		<a href="/" onclick="mju_do('prev');return false;">Назад</a> |
+		<a href="/" onclick="mju_do('play');return false;">Играть</a> | 
+		<a href="/" onclick="mju_do('pause');return false;">Пауза</a> |
+		<a href="/" onclick="mju_do('stop');return false;">Стоп</a> |
+		<a href="/" onclick="mju_do('next');return false;">Вперед</a><br>
+	</td>
+</tr></table>
+<!-- /пример пульта ДУ для mju -->
+
+</body>
+</html>
